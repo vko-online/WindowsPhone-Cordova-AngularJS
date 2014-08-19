@@ -173,6 +173,7 @@
     <None Include="Properties\WMAppManifest.xml">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="www\bower_components\angular\angular.js" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ApplicationIcon.png">
@@ -203,9 +204,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="www\bower_components\angular\angular-csp.css" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="www\bower_components\angular\angular.js" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="www\bower_components\angular\angular.min.js" />

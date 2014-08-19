@@ -384,7 +384,7 @@ namespace WPCordovaClassLib
             }
 
             // send js code to fire ready event
-            string nativeReady = "(function(){ cordova.require('cordova/channel').onNativeReady.fire()})();";
+            string nativeReady = "(function(){ cordova.require('cordova/channel').onNativeReady.fire(); angular.bootstrap(document,['opvko']); alert('ready')})();";
             try
             {
                 CordovaBrowser.InvokeScript("execScript", new string[] { nativeReady });

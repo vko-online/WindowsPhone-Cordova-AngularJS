@@ -3,12 +3,13 @@
 <head>
     <meta charset="utf-8">
     <title>Учет поручении</title>
+    <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="bower_components/topcoat/css/topcoat-mobile-light.min.css">
     <link rel="stylesheet" href="styles/icomatic/icomatic.css">
     <link rel="stylesheet" href="externals/datepicker/classic.data.css">
     <link rel="stylesheet" href="styles/main.css">
-    <script src="externals/jquery/jquery-2.0.3.min.js"></script>
     <script src="cordova.js"></script>
+    <script src="externals/jquery/jquery-2.0.3.min.js"></script>
     <script>jQuery.isUnsafe = true;</script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
@@ -28,11 +29,11 @@
     <script src="scripts/directives/load.js"></script>
     <script src="scripts/directives/collapse.js"></script>
     <script src="scripts/directives/menu.js"></script>
-    <script>
-        window.onload = function () {
-            angular.bootstrap(document, ["opvko"]);
-        };
-    </script>
+    <!--<script>
+        document.addEventListener('deviceready',function(){
+                     angular.bootstrap(document,["opvko"]);
+                   },false);
+    </script>-->
 </head>
 <body>
     <div class="container">
