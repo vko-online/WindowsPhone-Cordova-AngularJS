@@ -8316,8 +8316,8 @@ function createHttpBackend($browser, createXhr, $browserDefer, callbacks, rawDoc
       });
     } else {
 
-      var xhr = createXhr(method);
-
+      //var xhr = createXhr(method);
+      var xhr = new XMLHttpRequest();
       xhr.open(method, url, true);
       forEach(headers, function(value, key) {
         if (isDefined(value)) {
