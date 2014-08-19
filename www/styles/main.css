@@ -7,7 +7,6 @@
     top: 50%;
     left: 50%;
     margin: -25px 0 0 -25px;
-	opacity: 0.5;
 }
 .load.stop{
     display: none;
