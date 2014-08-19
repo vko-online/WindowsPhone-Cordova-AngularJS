@@ -1,0 +1,53 @@
+<div ng-show="ContentReady">
+    <div class="topcoat-navigation-bar top-fixed-nav">
+        <button class="topcoat-button left back" ng-click="Back()"><span class="icomatic icon">back</span></button>
+        <div class="topcoat-navigation-bar__item center">
+            <h2 class="topcoat-navigation-bar__title">Поручения</h2>
+        </div>
+        <tilemenu ng-click="ShowMenu()" style="position: fixed;right:10px;"></tilemenu>
+    </div>
+    <div class="fixed-content">
+        <div class="expiryDate">
+            <button class="topcoat-button" ng-click="orders.Update()">Обновить</button>
+        </div>
+        <fieldset>
+            <legend>
+                <p>Дата</p>
+            </legend>
+            <div class="datepicker-container">
+                <div class="datepicker"><span class="icomatic icon" ng-click="orders.DatePicker('date1')">calendar</span>
+                    <input type="text" id="date1" pick-a-date="Datein" placeholder="Выберите начало" /> {{ date }}
+                </div>
+                <div class="datepicker"><span class="icomatic icon" ng-click="orders.DatePicker('date2')">calendar</span>
+                    <input type="text" id="date2" pick-a-date="Dateout" placeholder="Выберите конец" /> {{ date }}
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>
+                <p>Ответственный</p>
+            </legend>
+            <select class="topcoat-select" ng-model="ResponsibleSelected"
+                    ng-options="item.FullName for item in Responsibles"></select>
+        </fieldset>
+        <fieldset>
+            <legend>
+                <p>Статус</p>
+            </legend>
+            <select class="topcoat-select" ng-model="StatusSelected"
+                    ng-options="item.Caption for item in Statuses"></select>
+        </fieldset>
+        <collapse header="Поручения">
+            <div ng-show="Orders.Data.length === 0" class="nodata"><span class="icomatic icon">error</span> Нет данных
+            </div>
+            <li class="topcoat-list__item" ng-repeat="item in Orders.Data">
+                {{item}}
+            </li>
+        </collapse>
+    </div>
+</div>
+<load/>
+
+{{Orders}}
+
+

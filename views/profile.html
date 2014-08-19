@@ -1,0 +1,44 @@
+<div ng-show="ContentReady">
+    <div class="topcoat-navigation-bar top-fixed-nav">
+        <button class="topcoat-button left back" ng-click="Back()"><span class="icomatic icon">back</span></button>
+        <div class="topcoat-navigation-bar__item center">
+            <h2 class="topcoat-navigation-bar__title">Профиль</h2>
+        </div>
+        <tilemenu ng-click="ShowMenu()" style="position: fixed;right:10px;"></tilemenu>
+    </div>
+    <div class="fixed-content">
+        <div class="expiryDate">
+            <span class="topcoat-notification">{{Profile.FullName}}</span>
+        </div>
+        <fieldset>
+            <legend>
+                <p>Идентификатор</p>
+            </legend>
+            {{Profile.Id}}
+        </fieldset>
+        <fieldset>
+            <legend>
+                <p>Текущий оператор</p>
+            </legend>
+            <fieldset>
+                <legend>
+                    <p>Пользователь</p>
+                </legend>
+                {{Profile.CurrentOperatorInfo.FullName}}
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <p>Логин</p>
+                </legend>
+                    {{Profile.CurrentOperatorInfo.Login}}
+            </fieldset>
+        </fieldset>
+        <fieldset>
+            <legend>
+                <p>Описание</p>
+            </legend>
+            {{Profile.Post}}
+        </fieldset>
+    </div>
+</div>
+<load />

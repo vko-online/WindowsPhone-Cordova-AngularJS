@@ -1,0 +1,25 @@
+<div ng-show="ContentReady">
+    <div class="topcoat-navigation-bar top-fixed-nav">
+        <!--<button class="topcoat-button left back"><span class="icomatic icon">tileview</span></button>-->
+        <div class="topcoat-navigation-bar__item center">
+            <h2 class="topcoat-navigation-bar__title">Учет Поручении</h2>
+        </div>
+        <tilemenu ng-click="ShowMenu()" style="position: fixed;right:10px;"></tilemenu>
+    </div>
+    <div class="fixed-content">
+        <collapse header="Входящие поручения">
+            <div ng-show="TileData.IncomingTasks.length === 0" class="nodata"><span class="icomatic icon">error</span> Нет данных</div>
+            <li class="topcoat-list__item" ng-repeat="item in TileData.IncomingTasks">
+                {{item.TaskText}} <span class="topcoat-notification">{{item.ExpirationDate}}</span>
+            </li>
+        </collapse>
+        <collapse header="Исходяще поручения">
+            <div ng-show="TileData.OutcomingTasks.length === 0" class="nodata"><span class="icomatic icon">error</span> Нет данных</div>
+            <li class="topcoat-list__item" ng-repeat="item in TileData.OutcomingTasks"
+                ng-click="main.OpenTask(item)">
+                {{item.TaskText}} <span class="topcoat-notification">{{item.ExpirationDate}}</span>
+            </li>
+        </collapse>
+    </div>
+</div>
+<load />

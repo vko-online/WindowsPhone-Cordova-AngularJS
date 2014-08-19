@@ -1,0 +1,11 @@
+<div class="topcoat-list">
+    <h3 class="topcoat-list__header" ng-click="toggle()">{{header}}
+        <div class="pull-right">
+            <div class="icomatic icon" ng-show="closed">expand</div>
+            <div class="icomatic icon" ng-hide="closed">collapse</div>
+        </div>
+    </h3>
+    <ul class="topcoat-list__container" ng-transclude ng-class="{closed: closed}">
+
+    </ul>
+</div>

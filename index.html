@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <title>Учет поручении</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" href="bower_components/topcoat/css/topcoat-mobile-light.min.css">
+    <link rel="stylesheet" href="styles/icomatic/icomatic.css">
+    <link rel="stylesheet" href="externals/datepicker/classic.data.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="externals/jquery/jquery-2.0.3.min.js"></script>
+    <script>jQuery.isUnsafe = true;</script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="externals/datepicker/datepicker.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/configs/routes.js"></script>
+    <script src="scripts/factories/home.js"></script>
+    <script src="scripts/factories/order.js"></script>
+    <script src="scripts/factories/profile.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/order.js"></script>
+    <script src="scripts/controllers/orders.js"></script>
+    <script src="scripts/controllers/protocol.js"></script>
+    <script src="scripts/controllers/protocols.js"></script>
+    <script src="scripts/controllers/profile.js"></script>
+    <script src="scripts/controllers/exit.js"></script>
+    <script src="scripts/directives/load.js"></script>
+    <script src="scripts/directives/collapse.js"></script>
+    <script src="scripts/directives/menu.js"></script>
+    <script>
+        window.onload = function () {
+            angular.bootstrap(document, ["opvko"]);
+        };
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div ng-view=""></div>
+    </div>
+</body>
+</html>

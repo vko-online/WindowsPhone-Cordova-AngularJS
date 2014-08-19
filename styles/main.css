@@ -1,0 +1,154 @@
+.pull-right{
+    float:right;
+}
+.load{
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+}
+.load.stop{
+    display: none;
+}
+.topcoat-select{
+    width: 100%;
+}
+.datepicker-container{
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.datepicker{
+    max-width: 500px;
+    height: 100%;
+    float:left;
+    text-align: center;
+}
+.menu{
+    padding: 20px;
+    border: 1px solid #9daca9;
+    position: fixed;
+    top:70px;
+    left:0;
+    width:50%;
+    max-width: 9999px;
+    height: 100%;
+    -webkit-transition: all 1000ms cubic-bezier(0.165, 0.840, 0.440, 1.000);
+    -moz-transition: all 1000ms cubic-bezier(0.165, 0.840, 0.440, 1.000);
+    -o-transition: all 1000ms cubic-bezier(0.165, 0.840, 0.440, 1.000);
+    transition: all 1000ms cubic-bezier(0.165, 0.840, 0.440, 1.000); /* easeOutQuart */
+    z-index: 1000;
+    background:rgb(210, 214, 214);
+}
+.topcoat-list__item__helper{
+    border-right: 1px solid #9daca9;
+    border-left: 1px solid #9daca9;
+}
+.menu.closed{
+    left:-70%;
+    -webkit-transition: all 1000ms cubic-bezier(0.165, 0.840, 0.440, 1.000);
+    -moz-transition: all 1000ms cubic-bezier(0.165, 0.840, 0.440, 1.000);
+    -o-transition: all 1000ms cubic-bezier(0.165, 0.840, 0.440, 1.000);
+    transition: all 1000ms cubic-bezier(0.165, 0.840, 0.440, 1.000); /* easeOutQuart */
+}
+.topcoat-list__header{
+    cursor: pointer;
+}
+.topcoat-list__container.closed{
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+}
+.topcoat-list__container{
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    max-height: 1000px;
+}
+.top-fixed-nav{
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+.topcoat-list__item{
+    cursor: pointer;
+}
+.fixed-content{
+    padding-top:4.375rem;
+}
+.expiryDate{
+    text-align: center;
+}
+fieldset{
+    border-radius: 4px;
+    border-color: lightgray;
+    border-width: 2px;
+    border-style: solid;
+    font-family: source-sans-pro, sans-serif;
+    font-size: 14px;
+    color: darkslategrey;
+}
+legend{
+    font-size: 12px;
+    color: darkgray;
+}
+.back{
+    margin-top:10px;
+}
+.icon{
+    color:gray;
+}
+.nodata{
+    color:gray;
+    text-align: center;
+    width: 130px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.spinner {
+    height:100px;
+    width: 100px;
+    vertical-align:middle;
+    text-align: center;
+}
+
+.spinner > div {
+    width: 18px;
+    height: 18px;
+    background-color: gray;
+
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+    animation: bouncedelay 1.4s infinite ease-in-out;
+    /* Prevent first frame from flickering when animation starts */
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.spinner .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+
+@-webkit-keyframes bouncedelay {
+    0%, 80%, 100% { -webkit-transform: scale(0.0) }
+    40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes bouncedelay {
+    0%, 80%, 100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    } 40% {
+          transform: scale(1.0);
+          -webkit-transform: scale(1.0);
+      }
+}

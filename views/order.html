@@ -1,0 +1,149 @@
+<div ng-show="ContentReady">
+    <div class="topcoat-navigation-bar top-fixed-nav">
+        <button class="topcoat-button left back" ng-click="Back()"><span class="icomatic icon">back</span></button>
+        <div class="topcoat-navigation-bar__item center">
+            <h2 class="topcoat-navigation-bar__title">{{Order.StatusName}}</h2>
+        </div>
+        <tilemenu ng-click="ShowMenu()" style="position: fixed;right:10px;"></tilemenu>
+    </div>
+    <div class="fixed-content">
+        <div class="expiryDate">
+            <span class="topcoat-notification">{{Order.DateExpiration | date:'yyyy-MM-dd'}}</span>
+        </div>
+        <fieldset>
+            <legend>
+                <p>Протокол №</p>
+            </legend>
+            {{Order.DocumentID}}
+        </fieldset>
+        <fieldset>
+            <legend>
+                <p>Документ</p>
+            </legend>
+            {{Order.DocumentName}}
+        </fieldset>
+        <fieldset>
+            <legend>
+                Примечание
+            </legend>
+            {{Order.Note}}
+        </fieldset>
+        <fieldset>
+            <legend>
+                Родитель
+            </legend>
+            <fieldset>
+                <legend>
+                    Описание
+                </legend>
+                {{Order.ParentTaskName.Discription}}
+            </fieldset>
+        </fieldset>
+        <fieldset>
+            <legend>
+                Результат
+            </legend>
+            {{Order.ResultText}}
+        </fieldset>
+        <fieldset>
+            <legend>
+                Статус
+            </legend>
+            {{Order.StatusName}}
+        </fieldset>
+        <fieldset>
+            <legend>
+                Содержание
+            </legend>
+            {{Order.Text}}
+        </fieldset>
+        <fieldset>
+            <legend>
+                Период
+            </legend>
+            {{Order.TypePeriodName}}
+        </fieldset>
+        <fieldset>
+            <legend>
+                Контроллеры
+            </legend>
+            <div class="topcoat-list">
+                <ul class="topcoat-list__container">
+                    <li class="topcoat-list__item" ng-repeat="i in Order.Controller">
+                        {{i.DisplayName}}
+                    </li>
+                </ul>
+            </div>
+        </fieldset>
+        <fieldset>
+            <Legend>Свойства</Legend>
+            <label for="checkbox1" class="topcoat-checkbox">
+                isAccess
+                <input id="checkbox1" type="checkbox" aria-describedby="checkbox2-description"
+                       ng-checked="Order.isAccess"
+                       disabled>
+
+                <div class="topcoat-checkbox__checkmark"></div>
+            </label>
+
+            <div class="spacer">
+                <hr>
+            </div>
+            <label for="checkbox2" class="topcoat-checkbox">
+                isCreateSubTask
+                <input id="checkbox2" type="checkbox" aria-describedby="checkbox2-description"
+                       ng-checked="Order.isCreateSubTask" disabled>
+
+                <div class="topcoat-checkbox__checkmark"></div>
+            </label>
+
+            <div class="spacer">
+                <hr>
+            </div>
+            <label for="checkbox3" class="topcoat-checkbox">
+                isDelegate
+                <input id="checkbox3" type="checkbox" aria-describedby="checkbox2-description"
+                       ng-checked="Order.isDelegate"
+                       disabled>
+
+                <div class="topcoat-checkbox__checkmark"></div>
+            </label>
+
+            <div class="spacer">
+                <hr>
+            </div>
+            <label for="checkbox4" class="topcoat-checkbox">
+                isEdit
+                <input id="checkbox4" type="checkbox" aria-describedby="checkbox2-description" ng-checked="Order.isEdit"
+                       disabled>
+
+                <div class="topcoat-checkbox__checkmark"></div>
+            </label>
+
+            <div class="spacer">
+                <hr>
+            </div>
+            <label for="checkbox5" class="topcoat-checkbox">
+                isExecute
+                <input id="checkbox5" type="checkbox" aria-describedby="checkbox2-description"
+                       ng-checked="Order.isExecute"
+                       disabled>
+
+                <div class="topcoat-checkbox__checkmark"></div>
+            </label>
+
+            <div class="spacer">
+                <hr>
+            </div>
+            <label for="checkbox6" class="topcoat-checkbox">
+                isSolution
+                <input id="checkbox6" type="checkbox" aria-describedby="checkbox2-description"
+                       ng-checked="Order.isSolution"
+                       disabled>
+
+                <div class="topcoat-checkbox__checkmark"></div>
+            </label>
+        </fieldset>
+    </div>
+</div>
+<load/>

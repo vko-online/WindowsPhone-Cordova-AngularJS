@@ -1,0 +1,35 @@
+<div ng-show="ContentReady">
+    <div class="topcoat-navigation-bar top-fixed-nav">
+        <button class="topcoat-button left back" ng-click="Back()"><span class="icomatic icon">back</span></button>
+        <div class="topcoat-navigation-bar__item center">
+            <h2 class="topcoat-navigation-bar__title">Профиль</h2>
+        </div>
+        <tilemenu ng-click="ShowMenu()" style="position: fixed;right:10px;"></tilemenu>
+    </div>
+    <div class="fixed-content">
+        <fieldset>
+            <legend>
+                <p>С даты</p>
+            </legend>
+            <div class="light placeholder">
+                <input class="topcoat-date-picker" type="date" name="poo">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>
+                <p>По дату</p>
+            </legend>
+            <div class="light placeholder">
+                <input class="topcoat-date-picker" type="date" name="poo">
+            </div>
+        </fieldset>
+        <collapse header="Входящие поручения">
+            <div ng-show="TileData.IncomingTasks.length === 0" class="nodata"><span class="icomatic icon">error</span> Нет данных</div>
+            <li class="topcoat-list__item" ng-repeat="item in TileData.IncomingTasks">
+                {{item.TaskText}} <span class="topcoat-notification">{{item.ExpirationDate}}</span>
+            </li>
+        </collapse>
+        <div>page 1</div>
+    </div>
+</div>
+<load />
